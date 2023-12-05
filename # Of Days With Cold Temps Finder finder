@@ -1,0 +1,77 @@
+/*
+*Author: Sara Goodie
+*Creation Date: 4/3/2023
+*Modification Date: 4/4/2023
+*Purpose:This program asks the user for a file name, the file contains
+ daily temperatures (integers), this program stores those temperatures
+ in the vector, and displays the number of days with freezing temperatures.
+*/
+
+
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+/*
+*Author: Sara Goodie
+*Creation Date: 4/3/2023
+*Modification Date: 4/4/2023
+*Purpose: this function takes reference to a vector of integers 
+ (temperatures) and returns to a new vector containing values
+ that are only <=32 which are freezing temperatures.
+*/
+
+
+vector<int> vectorFreezingTemperatures(vector<int>& V) {
+    vector<int> freezingTemperatures;
+    for (int i = 0; i < V.size(); i++) {
+        if (V[i] <= 32) {
+            freezingTemperatures.push_back(V[i]);
+        }
+    }
+    return freezingTemperatures;
+}
+ 
+/*
+*Author: Sara Goodie
+*Creation Date: 4/3/2023
+*Modification Date: 4/4/2023
+*Purpose: this function takes reference to a vector of integers,
+ reads temperature values from the file until there's no more
+ values to read.
+*/
+void readTemperaturesFromFile(vector<int>& V, ifstream& ifs) {
+    int temp;
+    while (ifs >> temp) {
+        V.push_back(temp);
+    }
+}
+
+int main() {
+    vector<int> temperatures;
+    string temperature1; 
+
+    cout << "Enter the filename: "; //displays statement
+    cin >> temperature1; //allows user to input text file
+
+
+    ifstream inputFile(temperature1); //opens file and checks if it's successfully opened
+    if (!inputFile) {
+        cerr << "Error: could not open file" << endl;
+        return 1;
+    }
+
+    readTemperaturesFromFile(temperatures, inputFile); // reads temperature from file
+
+
+    vector<int> freezingTemperatures = vectorFreezingTemperatures(temperatures); //getting freeze temps
+
+    cout << "The number of days with freezing temperatures: " << freezingTemperatures.size() << endl;
+
+    system("pause");
+    return 0;
+
+}
