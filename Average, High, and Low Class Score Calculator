@@ -1,0 +1,123 @@
+/*
+*Author: Sara Goodie
+*Creation Date: 3/20/2023
+*Modification Date: 3/20/2023
+*Purpose: This program points out the sum, average, highest, and lowest
+ numbers on your array, you can enter the max of 20 different 
+ elements. 
+*/
+
+
+#include <iostream>
+using namespace std;
+
+/*
+*Author: Sara Goodie
+*Creation Date: 3/20/2023
+*Modification Date: 3/20/2023
+*Purpose: This function gives the total sum of the array by looping
+ over each element of the array and adding to total. 
+*/
+
+int arraySum(int arr[], const int SIZE) {
+	int sum = 0;
+	for (int i = 0; i < SIZE; i++) {
+		sum += arr[i];
+	}
+	return sum;
+}
+
+/*
+*Author: Sara Goodie
+*Creation Date: 3/20/2023
+*Modification Date: 3/20/2023
+*Purpose: This function calculates the average of only
+ the positive elements, it divides the total positive numbers
+ by the number of positive elements.
+*/
+
+double avgPosi(int arr[], const int SIZE) {
+	int count = 0;
+	double sum = 0;
+	for (int i = 0; i < SIZE; i++) {
+		if (arr[i] > 0) {
+			count++;
+			sum += arr[i];
+		}
+	}
+	return sum / count;
+}
+
+/*
+*Author: Sara Goodie
+*Creation Date: 3/20/2023
+*Modification Date: 3/20/2023
+*Purpose: This function loops over the array, to compare
+each element to the found lowest value, and updating it until
+a smaller number is located. 
+*/
+
+int lowValue(int arr[], const int SIZE) {
+	int low = arr[0];
+	for (int i = 1; i < SIZE; i++) {
+		if (arr[i] < low) {
+			low = arr[i];
+			}
+	}
+	return low;
+}
+
+/*
+*Author: Sara Goodie
+*Creation Date: 3/20/2023
+*Modification Date: 3/20/2023
+*Purpose: This function loops over the array, to compare
+each element to the found highest value, and updating it until
+a larger number is located
+*/
+
+int highValue(int arr[], const int SIZE) {
+	int high = arr[0];
+	for (int i = 1; i < SIZE; i++) {
+		if (arr[i] > high) {
+			high = arr[i];
+		}
+	}
+	return high;
+}
+
+
+int main() {
+	const int SIZE = 20;
+	int values[SIZE] = { 0, 90, 54, -1, 23, 63, -88, 40, 17,
+    98, 74, 07, 22, -9, 2, 78, -60, 606, 23, 100 };
+	cout << "Initial Array: ";
+	for (int i = 0; i < SIZE; i++) {
+		cout << values[i] << " ";
+	}
+	cout << endl;
+	
+	// The code below displays the array's sum, average, high and low values.
+	int sum = arraySum(values, SIZE);
+	cout << "Sum of array: " << sum << endl;
+
+	double average = avgPosi(values, SIZE);
+	cout << "Array positive number average: " << average << endl;
+
+	int low = lowValue(values, SIZE);
+	cout << "Lowest value: " << low << endl;
+
+	int high = highValue(values, SIZE);
+	cout << "Highest value: " << high << endl;
+
+	system("pause");
+	return 0;
+}
+
+
+
+
+
+
+
+
