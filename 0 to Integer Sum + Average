@@ -1,0 +1,59 @@
+/*
+ *Author: Sara Goodie
+ *Creation Date: 1/24/2023
+ *Modification Date: 3/6/2023
+ *Purpose: This program calculates the sum of numbers from 0 to an integer (N) user input, inclusive. 
+ Then, the program also calculates the average, between the sum and the number of items.
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+/*
+ *Author: Sara Goodie
+ *Creation Date: 1/24/2023
+ *Modification Date: 3/6/2023
+ *Purpose: This function returns the sum of N numbers 
+*/
+int calculateSum(int N) {
+	int sum = 0;
+	for (int i = 0; i <= N; i++) {
+		sum += i;
+	}
+	return sum;
+}
+
+/*
+ *Author: Sara Goodie
+ *Creation Date: 1/24/2023
+ *Modification Date: 3/6/2023
+ *Purpose: This function calculates the average between 
+ given sum and items, returns type float
+*/
+
+float calculateAverage(int sum, int items) {
+	return (float) sum / items;
+}
+
+int main() {
+	int N; //declaring int 
+	do { 
+		cout << "Enter integer N: ";
+		cin >> N; //allows user to input integer (N)
+		if (N >= 0) { //condition, if true, that prints sum and average to user
+			int sum = calculateSum(N);
+			float average = calculateAverage(sum, N+1);
+		
+			//printing output
+			cout << "The sum of 0 to " << N << " is: " << sum << endl; 
+			cout << "The average of all " << N+1 << " numbers is: " << average << endl; 
+		} 
+	} while (N >= 0); //condition that checks for negative numbers to exit loop
+	cout << "Exiting program." << endl;
+	
+	system("pause");
+	return 0;
+}
+
