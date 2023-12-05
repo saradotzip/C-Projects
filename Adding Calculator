@@ -1,0 +1,38 @@
+/*
+ *Author: Sara Goodie
+ *Creation Date: 1/24/2023
+ *Modification Date: 1/31/2023
+ *Purpose: The following program prompts the user for two integers and displays the sum of the two integers.  
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	//declaring variables of type int 
+	int x, y, z;
+
+	//displaying a message asking the user to enter a first integer
+	cout << "Please enter a value for x: ";   
+	
+	//getting a value from the user
+	cin >> x;
+   
+	//displaying a message asking the user to enter a second integer
+	cout << "Please enter a value for y: ";
+	
+	//getting a value from the user
+	cin >> y;
+
+	//adding the two input values and assigning to 3rd variable as total
+	z = x + y;
+	
+	//displaying the final message of the sum of two inputs
+	cout << "The sum of the two integers is " << z << endl;
+	
+	system("pause");
+	return 0;
+
+}
