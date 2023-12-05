@@ -1,0 +1,52 @@
+/*
+ *Author: Sara Goodie
+ *Creation Date: 2/7/2023
+ *Modification Date: 2/7/2023
+ *Purpose: This program allows the user to input information so they could solve their 
+ quadratic equation.
+*/
+
+#include <iostream>
+#include <cmath>
+#include <iomanip> 
+using namespace std;
+
+int main()
+{
+	//declaring variables 
+	double a, b, c, d;
+
+	//displaying statement to the user
+	cout << "Enter  a,  b  and  c  which  represent  the  coefficients in the quadratic equation ax ^ 2 + bx + c = 0 : ";
+
+	//allows user to input their a,b,c
+	cin >> a >> b >> c;
+
+	//quadratic formula 
+	d = b * b - 4 * a * c;
+	
+	//declaring the roots
+	double rt1 = 0.0, rt2 = 0.0;
+
+	// if this condition is met, there's no real root 
+	if (a == 0 || d < 0)
+	{
+		cout << "No real root" << endl; //displays statement to user
+	}
+	// formulas for both roots
+	else {
+		d = sqrt(d);
+		rt1 = (-b + d) / (2 * a);
+		rt2 = (-b - d) / (2 * a);
+		//displays answer for the roots
+		cout << "Root1 is " << rt1 << endl;
+		cout << "Root2 is " << rt2 << endl;
+	}
+
+	
+
+
+	system("pause");
+	return 0;
+}
+
