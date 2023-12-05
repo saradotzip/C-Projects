@@ -1,0 +1,39 @@
+/*
+ *Author: Sara Goodie
+ *Creation Date: 2/12/2023
+ *Modification Date: 2/14/2023
+ *Purpose: This is a program that calculates the sum of N integers entered by the 
+user. N is a computer generated random number between 5 and 15 (both inclusive).
+*/
+
+#include <iostream>
+// libraries for rand, srand, and time. 
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+int main()
+{
+    srand(time(NULL)); // generates a number (seed) based on real time
+    int counter = 0; // declaring variable int, sets counter to 0
+    int sum = 0; // delcaring variable int, sets sum to 0
+    int num; // declaring variable
+    int n = (rand() % 11) + 5; // will generate a value between 5 - 15
+
+    cout << "input " << n << " numbers" << endl; 
+    
+    
+    while (counter < n) // set condition, less than-greater than, will trigger the below statements 
+
+    {
+        cout << "Input an integer: "; //output statement to user 
+        cin >> num; 
+        counter++; 
+        sum += num;
+    }
+
+    cout << sum << endl; //output sum 
+
+    system("pause");
+    return 0;
+}
