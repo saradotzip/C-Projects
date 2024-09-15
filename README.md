@@ -31,3 +31,33 @@ This collection of C++ mini-projects covers a range of practical applications, f
 - **Sum of Random Integers Calculator**: Adds a series of randomly generated integers to produce a total sum.
 
 ![App Screenshot](https://s1.gifyu.com/images/S1Jmq.gif)
+## Installation
+
+You want to try these out? *Get Started with Visual Studio for C++*
+
+
+**Install Visual Studio:**
+
+Download and install Visual Studio from visualstudio.com. Choose the free Community edition.
+
+**Open Visual Studio:**
+
+Click the Visual Studio icon to launch it.
+
+**Create a New Project:**
+
+Click Create a new project.
+Choose Console App for C++ and click Next.
+Name your project, choose a location to save it, and click Create.
+
+**Enter Your Code:**
+
+Visual Studio will open a file where you can type or paste your C++ code.
+
+**Build Your Code:**
+
+Click Build in the top menu and select Build Solution (or press Ctrl + Shift + B).
+
+**Run Your Code:**
+
+Click Debug in the top menu and select Start Debugging (or press F5). This will run your program and show the output in a console window. And you're done!
