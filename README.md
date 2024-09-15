@@ -1,5 +1,5 @@
 
-# C++ Nuggets: Everyday Problem Solvers
+# C++ Nuggets: Everyday Problem Solvers 📝
 
 This collection of C++ mini-projects covers a range of practical applications, from calculating sums, averages, and temperatures, to solving quadratic equations and working with U.S. state data. Each project focuses on solving everyday problems, such as adding numbers, analyzing class scores, or summing coin values, while demonstrating essential programming concepts like loops, conditionals, and input handling.
 
